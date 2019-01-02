@@ -17,8 +17,8 @@ class ProfileScreen extends React.Component {
 
   render() {
     const { data } = this.props
-    console.log('DARA', data)
-    if (data && data.loading) {
+    console.log('RENDER', data)
+    if (data && data.loading && data.networkStatus === 4) {
       return (
         <View style={{ justifyContent: 'center', alignItems: 'center', flex: 1 }}>
           <ActivityIndicator size="large" />

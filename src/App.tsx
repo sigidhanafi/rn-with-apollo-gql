@@ -9,7 +9,7 @@ import ProfileScreen from './component/ProfileScreen';
 const httpLink = new HttpLink({
   uri: 'https://api.github.com/graphql',
   headers: {
-    "Authorization": "token 091df03b9aa769c28be731f14c58b57c6b4a3f5e"
+    "Authorization": "token"
   }
 })
 

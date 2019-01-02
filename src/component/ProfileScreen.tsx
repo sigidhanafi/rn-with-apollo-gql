@@ -6,7 +6,6 @@ import gql from 'graphql-tag'
 class ProfileScreen extends React.Component {
   render() {
     const { data } = this.props
-    console.log('DATA', data)
     if (data && data.loading) {
       return (
         <View style={{ justifyContent: 'center', alignItems: 'center', flex: 1 }}>

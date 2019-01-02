@@ -7,9 +7,8 @@ class ProfileScreen extends React.Component {
   handleRetry = () => {
     const { data } = this.props
     const { refetch } = data
-    console.log('halo', data)
-
     try {
+      console.log('refetch')
       refetch()
     } catch (e) {
       console.log('Error', e)
@@ -44,6 +43,9 @@ class ProfileScreen extends React.Component {
           <Image source={{ uri: data.user.avatarUrl }} style={{ width: 100, height: 100, margin: 10 }}/>
           <Text>{ data.user.name  }</Text>
           <Text>{ data.user.bio  }</Text>
+          <TouchableOpacity onPress={this.handleRetry}>
+            <Text>Coba lagi</Text>
+          </TouchableOpacity>
         </View>
       )
     }

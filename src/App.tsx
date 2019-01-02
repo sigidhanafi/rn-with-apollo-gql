@@ -4,9 +4,13 @@ import { ApolloClient } from 'apollo-client'
 import { ApolloProvider } from 'react-apollo'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 import { HttpLink } from 'apollo-link-http'
+import ProfileScreen from './component/ProfileScreen';
 
 const httpLink = new HttpLink({
   uri: 'https://api.github.com/graphql',
+  headers: {
+    "Authorization": "token 091df03b9aa769c28be731f14c58b57c6b4a3f5e"
+  }
 })
 
 const client = new ApolloClient({
@@ -30,7 +34,7 @@ export default class App extends Component {
     return (
       <ApolloProvider client={client}>
         <View style={styles.container}>
-          <Text>Welcome to React Native!</Text>
+          <ProfileScreen />
         </View>
       </ApolloProvider>
     )
